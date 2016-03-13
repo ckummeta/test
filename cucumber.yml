@@ -1,0 +1,5 @@
+<%default_opts = "-r features --tags ~@wip --tags ~@pending --tags ~@manual -o results/cucumber.json --format Cucumber::Formatter::HtmlCustomFormatter -o results/features_report.html --format pretty" %>
+
+default: local
+local: <%= default_opts %> SERVER=PROD
+ci: <%= default_opts %>
